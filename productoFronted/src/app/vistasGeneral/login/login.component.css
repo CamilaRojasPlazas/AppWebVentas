@@ -1,0 +1,61 @@
+
+.formulario-login{
+    width: 300px;
+    height: 250px;
+    background: white; 
+}
+
+.titulo{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(212, 119, 13,0), rgba(244, 153, 49));
+    overflow: hidden;/*Oculta cualquier cosa que se sale*/
+}
+
+h1{
+    padding-top: 10px;
+    font-size: 32px;
+}
+
+.contenido-form{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputEmail{
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.inputPass{
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+input{
+    width: 230px;
+    border: 2px solid orange;
+    border-radius: 8px;
+}
+
+.botonIngresar{
+    padding-top: 20px;
+    padding-left: 110px;
+}
+
+button{
+    background-color:rgb(229, 124, 12);
+    padding: 8px 10px;
+    color: white;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}

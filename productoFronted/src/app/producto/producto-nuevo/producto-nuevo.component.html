@@ -1,0 +1,23 @@
+<form action="" (ngSubmit)="createProducto()" class="formulario-producto">
+
+    <div class="titulo">
+        <h1>Antojo Valluno</h1>
+    </div>
+
+    <div class="contenido-form">
+
+        <div class="inputCodigo">
+            <input type="text" [(ngModel)]="producto.codigo" placeholder="codigo producto" id="codigo" name="codigo" required />
+        </div>
+        <div class="inputNombre">
+            <input type="text" [(ngModel)]="producto.nombre" placeholder="nombre producto" id="nombre" name="nombre" required />
+        </div>
+        <div class="inputPrecio">
+            <input type="number" [(ngModel)]="producto.precio" placeholder="precio" id="precio" name="precio" required />
+        </div>
+    
+        <div class="botonAgregar">
+            <button type="submit">Agregar</button>
+        </div>
+    </div>    
+</form>

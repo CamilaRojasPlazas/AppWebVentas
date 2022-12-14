@@ -1,0 +1,20 @@
+<form action="" (ngSubmit)="usuarioLogin()" class="formulario-login">
+
+    <div class="titulo">
+        <h1>Antojo Valluno</h1>
+    </div>
+
+    <div class="contenido-form">
+        <div class="inputEmail">
+            <input type="email" [(ngModel)]="usuario.email" placeholder="Email" id="userId" name="userId" required />
+        </div>
+        <div class="inputPass">
+            <input type="password" [(ngModel)]="usuario.contrasena" placeholder="Password" id="userId" name="userId" required />
+        </div>
+    
+        <div class="botonIngresar">
+            <button type="submit">Iniciar</button>
+        </div>
+    </div>    
+</form>
+

@@ -1,0 +1,49 @@
+<div class="contenidoProductos">
+
+    <!-- Cabecera -->
+    <div class="cabeceraProducto">
+        <div class="tituloProducto">
+            <h2>LISTA DE PRODUCTOS</h2>
+        </div>
+
+        <div class="navbarProducto">
+            <nav class="navbar">
+                <a class="link" routerLink="">Volver</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="botonAgregarProducto">
+        <button  class="link" (click)="openDialog()">Agregar</button>
+    </div>
+
+    <!-- Tabla -->
+    <div class="tabla">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor ="let producto of productos">
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.codigo}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>{{producto.stock}}</td>
+                    <td><button class=" btn btn-outline-warning" (click)="openDialogModificar(producto)"><i class="fa-regular fa-pen-to-square"></i>Editar</button></td>
+                    <td><button class=" btn btn-outline-danger" (click)='borrar(producto.id,producto.stock)'><i class="fa-solid fa-trash"></i>Eliminar</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

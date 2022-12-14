@@ -1,0 +1,35 @@
+1- Abrir sprint initializr para descargar el proyecto en sprint: se requiere de las librerias Spring Web, Spring Data JPA, PostgreSQL Driver, JDBC API y Lombok
+2- Abrir proyecto en Apache Netbeens
+
+
+
+FRONT
+
+https://www.npmjs.com/package/ngx-toastr
+
+1- En el archivo index, justo encima antes de cerrarse la etiqueta head
+2- descargas tosted que son anuncios o mensajes que duran varios segundos npm i ngx-toastr
+3- instalar las animaciones npm install @angular/animations --save
+4- importar en app.module.ts que esta en src/app:
+
+	import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+	import { ToastrModule } from 'ngx-toastr';
+	
+Luego ahi mismo en los import pego: 
+
+	BrowserAnimationsModule, // required animations module
+    	ToastrModule.forRoot(),
+
+4- crear los componentes
+
+- ng g class modelos/producto --skip-tests
+- ng g c producto/lista-producto --skip-tests --flat (se hizo 3 veces)
+
+5- ng g s servicio/producto --skip-tests 
+
+
+
+
+----------------------------------------
+ng serve: ejecutar

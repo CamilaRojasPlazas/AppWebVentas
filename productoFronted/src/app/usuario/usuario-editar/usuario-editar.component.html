@@ -1,0 +1,33 @@
+<form action="" (ngSubmit)="editarUsuario()" class="formulario-usuario">
+
+    <div class="titulo">
+        <h1>Antojo Valluno</h1>
+    </div>
+
+    <div class="contenido-form">
+
+        <div class="inputCedula">
+            <input type="number" [(ngModel)]="usuario.cedula"  placeholder="cedula usuario" id="cedula" name="cedula" required />
+        </div>
+        <div class="inputNombre">
+            <input type="text" [(ngModel)]="usuario.nombre" placeholder="nombre" id="nombre" name="nombre" required />
+        </div>
+        <div class="inputCorreo">
+            <input type="email" [(ngModel)]="usuario.email" placeholder="email" id="email" name="email" required />
+        </div>
+        <div class="inputContrasena">
+            <input type="text" [(ngModel)]="usuario.contrasena" placeholder="contrasena" id="contrasena" name="contrasena" required />
+        </div>
+        <div class="inputRol">
+            <select [(ngModel)]="usuario.rol" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let rol of arrayRoles" value="{{rol.id}}">{{rol.name}}</option>
+            </select>
+        </div> 
+    
+        <div class="botonAgregar">
+            <button type="submit">Guardar cambios</button>
+        </div>
+
+    </div>    
+</form> 
+

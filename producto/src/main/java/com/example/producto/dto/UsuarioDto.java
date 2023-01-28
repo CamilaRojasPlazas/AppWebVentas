@@ -18,16 +18,19 @@ public class UsuarioDto {
     private String contrasena;
 
     private int rol;
+    
+    private boolean eliminado;
 
     public UsuarioDto() {
     }
 
-    public UsuarioDto( String nombre, String cedula, String email, String contrasena, int rol) {
+    public UsuarioDto( String nombre, String cedula, String email, String contrasena, int rol, boolean eliminado) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.email = email;
         this.contrasena = contrasena;
         this.rol = rol;
+        this.eliminado = eliminado;
     }
 
     public String getNombre() {
@@ -69,5 +72,15 @@ public class UsuarioDto {
     public void setRol(int rol) {
         this.rol = rol;
     }
+
+    public boolean getEliminado() {
+        return eliminado;
+    }
+
+    public void setEliminado(boolean eliminado) {
+        this.eliminado = eliminado;
+    }
+    
+    
    
 }

@@ -49,6 +49,7 @@ export class ProductoEditarComponent implements OnInit {
         timeOut: 1000,positionClass: 'toast-center-center'
       });
       this.dialogRef.closeAll(); 
+      this.productoService.eventDisparador.emit();
     }, 
     err => {
       this.toastr.error(err.error.mensaje, 'Faild',{

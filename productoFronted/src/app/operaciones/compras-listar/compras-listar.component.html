@@ -1,0 +1,73 @@
+<div class="contenidoVentas">
+	<!-- Cabecera -->
+    <div class="cabeceraVentas">
+        <div class="tituloVenta">
+            <h2>COMPRAS</h2>
+        </div>
+
+        <div class="navbarVentas">
+            <nav class="navbar">
+                <a class="link" routerLink="/menu">Volver</a>
+            </nav>
+        </div>
+    </div>
+
+
+	<form>
+		<div class='field_derecho'>
+			<label>Proveedor</label>
+			<select name='Proveedor' required>
+				<option selected disabled>Sel. una opción</option>
+				<option>Embueltos doña rosa</option>
+				<option>Distribuidora de alimentos SA</option>
+				<option>Dinamic alimentary solutions</option>
+			</select>
+		</div>
+		<div class='field_izquierdo'>
+			<label>Producto</label>
+			<select name='producto' required>
+				<option selected disabled>Sel. una opción</option>
+				<option>Empanadas</option>
+				<option>Embutidos</option>
+				<option>Arepas</option>
+			</select>
+
+		</div>
+		<div class='field_derecho'>
+			<label>Cantidad</label>
+			<input name='Cantidad' type='number' autocomplete />
+		</div>
+
+		<div class='field_izquierdo'>
+			<label>Fecha</label>
+			<input name='Fecha' type='date' autocomplete />
+		</div>
+        
+		<div class='submit'>
+			<button >
+				AGREGAR
+			</button>
+            <button >
+				FINALIZAR
+			</button>
+		</div>
+	</form>
+	<div class="x">
+		<label class="factu-label">FACTURACION</label>
+		<table class='factu'> 
+			<thead>
+			<tr>
+                <th style="width: 150x" scope="col">CODIGO</th>
+				<th style="width: 310px" scope="col">NOMBRE</th>
+                <th style="width: 200px" scope="col">CANTIDAD</th>
+				<th style="width: 200px" scope="col">TOTAL</th>
+			</tr>
+		</thead>
+		<tbody>
+				<!-- aca se debe asociar los datos de la base de datos -->	
+		</tbody>
+		</table>
+	</div>
+
+        
+</div>

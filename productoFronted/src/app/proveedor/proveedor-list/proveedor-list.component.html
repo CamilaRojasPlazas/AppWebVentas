@@ -1,0 +1,49 @@
+<div class="contenidoProveedor">
+
+    <!-- Cabecera -->
+    <div class="cabeceraProveedor">
+        <div class="tituloProveedor">
+            <h2>LISTA DE PROVEEDORES</h2>
+        </div>
+
+        <div class="navbarProveedor">
+            <nav class="navbar">
+                <a class="link" routerLink="/menu">Volver</a>
+            </nav>
+        </div>
+    </div>    
+    
+    <div class="botonAgregarProveedor">
+        <button  class="link" (click)="openDialog()">Agregar</button>
+    </div> 
+
+    <!-- Tabla -->
+    <div class="tabla">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>NIT</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let proveedor of proveedores">
+                    <td>{{proveedor.id}}</td>
+                    <td>{{proveedor.nombre}}</td>
+                    <td>{{proveedor.nit}}</td>
+                    <td>{{proveedor.email}}</td>
+                    <td>{{proveedor.telefono}}</td>
+                    
+                    <td><button class=" btn btn-outline-warning" (click)="openDialogModificar(proveedor)"><i class="fa-regular fa-pen-to-square"></i>Editar</button></td>
+                    <td><button class=" btn btn-outline-danger" (click)='borrar(proveedor.id)'><i class="fa-solid fa-trash"></i>Eliminar</button></td> 
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+.contenidoUsuario{
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.cabeceraUsuario{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(212, 119, 13,0), rgba(244, 153, 49));
+    overflow: hidden;/*Oculta cualquier cosa que se sale*/    
+}
+
+.tituloUsuario{
+     width: 60%;
+}
+
+h2{
+    margin: auto;
+    text-align: right;
+    font-size: 28px;    
+}
+
+.navbarUsuario{
+    width: 40%;
+    text-align: right;
+}
+
+.botonAgregarUsuario{
+    width: 25%;
+    height: 120px; 
+    position: relative;   
+}
+
+.botonAgregarUsuario button{
+    float: right;
+    margin-top: 55px;
+    border: none;
+    background-color: orange; 
+    color: white;
+    padding: 10px 25px;
+}
+
+.tabla{
+    overflow: scroll;
+    height: 400px;
+}
+
+table{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px;
+    border-collapse: collapse;
+    text-align: center;
+    align-content: center;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+
+th{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(190, 185, 185);
+}
+
+td{
+    text-align: center;
+    background-color: white;
+}

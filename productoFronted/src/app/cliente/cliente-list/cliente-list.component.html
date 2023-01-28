@@ -1,0 +1,47 @@
+<div class="contenidoCliente">
+
+    <!-- Cabecera -->
+    <div class="cabeceraCliente">
+        <div class="tituloCliente">
+            <h2>LISTA DE CLIENTES</h2>
+        </div>
+
+        <div class="navbarCliente">
+            <nav class="navbar">
+                <a class="link" routerLink="/menu">Volver</a>
+            </nav>
+        </div>
+    </div>    
+    
+    <div class="botonAgregarCliente">
+        <button  class="link" (click)="openDialog()">Agregar</button>
+    </div> 
+
+    <!-- Tabla -->
+    <div class="tabla">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Cedula</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let cliente of clientes">
+                    <td>{{cliente.id}}</td>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.cedula}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.telefono}}</td>
+                    
+                    <td><button class=" btn btn-outline-warning" (click)="openDialogModificar(cliente)"><i class="fa-regular fa-pen-to-square"></i>Editar</button></td>
+                    <td><button class=" btn btn-outline-danger" (click)='borrar(cliente.id)'><i class="fa-solid fa-trash"></i>Eliminar</button></td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>

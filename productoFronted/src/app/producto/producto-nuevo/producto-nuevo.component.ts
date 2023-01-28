@@ -4,7 +4,7 @@ import { ProductoService } from 'src/app/service/producto.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { ProductoListComponent } from '../producto-list/producto-list.component';
+
 
 
 @Component({
@@ -32,7 +32,7 @@ export class ProductoNuevoComponent implements OnInit {
         timeOut: 500,positionClass: 'toast-center-center'
       });
       this.dialogRef.closeAll(); 
-               
+      this.productoService.eventDisparador.emit();               
     },
     err => {
       this.toastr.error(err.error.mensaje, 'Faild',{
@@ -42,14 +42,4 @@ export class ProductoNuevoComponent implements OnInit {
     );
 
   }
-
-  refrescar():void{
-    
-  }
-
-
-
-
-
-
 }

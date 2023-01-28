@@ -1,0 +1,205 @@
+.contenidoVentas{
+    width: 100%;
+    align-content: center;
+    align-items: center;
+
+}
+
+.cabeceraVentas{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(212, 119, 13,0), rgba(244, 153, 49));
+    overflow: hidden;/*Oculta cualquier cosa que se sale*/    
+}
+
+.tituloVenta{
+	width: 50%;
+}
+
+h2{
+    margin: auto;
+    text-align: right;
+    font-size: 36px;    
+}
+
+.navbarVentas{
+    width: 40%;
+    text-align: right;
+}
+
+h1{
+	margin-bottom: 40px;
+	text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+
+
+form{
+	display: grid;
+	grid-template-columns: 300px 300px;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	background: yellow;
+}
+
+.field_izquierdo{
+	padding-right: 120px;
+	flex-direction: column;
+	width: 10rem;
+	margin: 0.3rem 0;
+
+}
+
+.field_derecho{
+	padding-left: 70px;
+	width: 10rem;
+	margin: 0.3rem 0;
+}
+
+.field_derecho label{
+	font-size: 1rem;
+	margin-bottom: 0.2rem;
+	color: #696969;
+}
+
+.field_izquierdo label{
+	font-size: 1rem;
+	margin-bottom: 0.2rem;
+	color: #696969;
+}
+
+.field_derecho input{
+	font-size: 1.1rem;
+	height: 2.2rem;
+	border: 2px solid #696969;
+	border-radius: 5px;
+}
+
+.field_izquierdo input{
+	font-size: 1.1rem;
+	height: 2.2rem;
+	border: 2px solid #696969;
+	border-radius: 5px;
+}
+
+.field_derecho select{
+	font-size: 1.1rem;
+	width: 12rem;
+	height: 2.6rem;
+	padding-left: 0.5rem;
+
+	border: 2px solid #696969;
+	border-radius: 5px;
+}
+
+.field_izquierdo select{
+	font-size: 1.1rem;
+	width: 12rem;
+	height: 2.6rem;
+	padding-left: 0.5rem;
+
+	border: 2px solid #696969;
+	border-radius: 5px;
+}
+.x{
+	display: flex;
+	flex-direction: column;
+	width: 58%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.factu tbody{
+	/*
+	display: flex;
+	flex-direction: column;*/
+	height: 220px;
+	overflow-y: auto;
+	width: 100%;
+	
+}
+
+
+.factu-label {
+	font-size: 1rem;
+	margin-bottom: 0.2rem;
+	margin-top: 20px;
+	color: #696969;
+}
+
+.factu thead,
+.factu tbody,
+.factu td,
+.factu th{
+	display: block;
+	text-align: center;
+}
+
+
+.factu tbody td,
+.factu thead > tr > th{
+	float: left;
+	border-bottom-width: 0;
+}
+
+table,th,td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+th,td{
+	padding: 10px;
+}
+th{
+	background-color:#101010;
+	box-shadow: 0 .3rem 5rem rgba(0,0,0, .5);
+	color: #fff;
+	text-align: left;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+
+}
+
+tr:hover td{
+	background-color:#696969;
+	color: white;
+}
+
+
+
+.submit{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 1.75rem;
+	margin-left: 100%;
+	padding-left:100%;
+}
+
+
+
+.submit button{
+	font-size: 1.1rem;
+	padding: 1rem 1.5rem;
+	cursor: pointer;
+	box-shadow: 0 .3rem 5rem rgba(0,0,0, .5);
+	border-radius: 1rem;
+	background: #101010;
+	text-decoration: none;
+    color: #fff;
+}
+
+.submit button:hover{
+	color: orangered;
+}

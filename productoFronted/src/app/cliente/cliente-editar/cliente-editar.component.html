@@ -1,0 +1,28 @@
+<form action=""  class="formulario-cliente" (ngSubmit)="editarCliente()">
+
+    <div class="titulo">
+        <h1>Antojo Valluno</h1>
+    </div>
+
+    <div class="contenido-form">
+
+        <div class="inputNombre">
+            <input type="text" [(ngModel)]="cliente.nombre" placeholder="nombre o razon social" id="nombre" name="nombre" required />
+        </div>
+        <div class="inputCedula">
+            <input type="number" [(ngModel)]="cliente.cedula"  placeholder="cedula o NIT" id="cedula" name="cedula" required />
+        </div>
+        <div class="inputCorreo">
+            <input type="email" [(ngModel)]="cliente.email" placeholder="email" id="email" name="email" required />
+        </div>
+        <div class="inputTelefono">
+            <input type="text" [(ngModel)]="cliente.telefono" placeholder="telefono" id="contrasena" name="contrasena" required />
+        </div>
+    
+        <div class="botonAgregar">
+            <button type="submit">Agregar</button>
+        </div>
+
+    </div>    
+</form> 
+

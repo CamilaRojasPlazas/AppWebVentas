@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable,EventEmitter,Output } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 import { Producto } from '../models/producto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
+
 
   private productoURL = 'http://localhost:8081/producto/';
 
@@ -36,5 +37,7 @@ export class ProductoService {
   public eliminar(id:number): Observable<any>{
     return this.httpClient.delete<any>(this.productoURL+`delete/${id}`);
   }
+
+  @Output() eventDisparador:EventEmitter<any> =new EventEmitter();
   
 }

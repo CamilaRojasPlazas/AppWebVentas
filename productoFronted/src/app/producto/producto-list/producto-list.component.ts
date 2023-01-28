@@ -6,6 +6,7 @@ import { ProductoNuevoComponent } from '../producto-nuevo/producto-nuevo.compone
 import { ToastrService } from 'ngx-toastr';
 import { ProductoEditarComponent } from '../producto-editar/producto-editar.component';
 
+
 @Component({
   selector: 'app-producto-list',
   templateUrl: './producto-list.component.html',
@@ -24,6 +25,9 @@ export class ProductoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProductos();
+    this.productoService.eventDisparador.subscribe(() => {
+      this.getProductos();
+    }) 
   }
 
   //obtiene la lista de productos

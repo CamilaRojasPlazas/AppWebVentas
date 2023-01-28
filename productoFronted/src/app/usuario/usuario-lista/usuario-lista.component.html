@@ -1,0 +1,52 @@
+<div class="contenidoUsuario">
+
+    <!-- Cabecera -->
+    <div class="cabeceraUsuario">
+        <div class="tituloUsuario">
+            <h2>LISTA DE USUARIOS</h2>
+        </div>
+
+        <div class="navbarUsuario">
+            <nav class="navbar">
+                <a class="link" routerLink="/menu">Volver</a>
+            </nav>
+        </div>
+    </div>    
+    
+    <div class="botonAgregarUsuario">
+        <button  class="link" (click)="openDialog()">Agregar</button>
+    </div> 
+
+    <!-- Tabla -->
+    <div class="tabla">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                    <th>Rol</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor ="let usuario of usuarios">
+                    <td>{{usuario.id}}</td>
+                    <td>{{usuario.cedula}}</td>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.contrasena}}</td>
+                    <td>{{usuario.rol}}</td>
+                    
+                    <td><button class=" btn btn-outline-warning" (click)="openDialogModificar(usuario)"><i class="fa-regular fa-pen-to-square"></i>Editar</button></td>
+                    <td><button class=" btn btn-outline-danger" (click)='borrar(usuario.id)'><i class="fa-solid fa-trash"></i>Eliminar</button></td> 
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

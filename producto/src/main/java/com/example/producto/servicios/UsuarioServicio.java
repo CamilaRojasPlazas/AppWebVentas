@@ -17,7 +17,7 @@ public class UsuarioServicio {
     UsuarioRepositorio usuarioRepositorio;
     
     public List <Usuario> getListaUsuario(){
-        return usuarioRepositorio.findAll();
+        return usuarioRepositorio.listaUsuarios();
     }
     
     public Optional<Usuario> getUsuarioId(int id){
@@ -42,6 +42,10 @@ public class UsuarioServicio {
     
     public void borrarUsuario(int id){
         usuarioRepositorio.deleteById(id);
+    }
+    
+    public boolean existeById(int id){
+        return usuarioRepositorio.existsById(id);
     }
     
     public boolean existByEmail(String email){

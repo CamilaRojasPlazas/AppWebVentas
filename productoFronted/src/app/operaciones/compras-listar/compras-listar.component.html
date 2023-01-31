@@ -13,61 +13,68 @@
     </div>
 
 
-	<form>
-		<div class='field_derecho'>
-			<label>Proveedor</label>
-			<select name='Proveedor' required>
-				<option selected disabled>Sel. una opción</option>
-				<option>Embueltos doña rosa</option>
-				<option>Distribuidora de alimentos SA</option>
-				<option>Dinamic alimentary solutions</option>
-			</select>
-		</div>
-		<div class='field_izquierdo'>
-			<label>Producto</label>
-			<select name='producto' required>
-				<option selected disabled>Sel. una opción</option>
-				<option>Empanadas</option>
-				<option>Embutidos</option>
-				<option>Arepas</option>
-			</select>
+	<main>
+		<form (ngSubmit)="crearFactura()">
+			<div class='field'>
+				<label>Proveedor</label>
+				<select [(ngModel)]="facturaCompra.proveedor" [ngModelOptions]="{standalone: true}" required>
+					<option  *ngFor="let proveedor of proveedores" value="{{proveedor.id}}">{{proveedor.id}}-{{proveedor.nombre}}</option>
+				</select>
+			</div>
+			<div class='field'>
+				<label>Producto</label>
+				<select [(ngModel)]="facturaCompra.producto" [ngModelOptions]="{standalone: true}" name='producto' required>
+					<option *ngFor="let producto of productos" value="{{producto.id}}">{{producto.id}}-{{producto.nombre}}</option>
+				</select>
+			</div>
+			<div class='field'>
+				<label>Cantidad</label>
+				<input [(ngModel)]="facturaCompra.cantidad" name='Cantidad' type='number' autocomplete />
+			</div>
 
-		</div>
-		<div class='field_derecho'>
-			<label>Cantidad</label>
-			<input name='Cantidad' type='number' autocomplete />
-		</div>
+			<div class='field'>
+				<label>Fecha</label>
+				<input [(ngModel)]="facturaCompra.fecha" name='Fecha' type='date' autocomplete />
+			</div>
 
-		<div class='field_izquierdo'>
-			<label>Fecha</label>
-			<input name='Fecha' type='date' autocomplete />
+			<div class="submit">
+				<button >
+					REGISTRAR COMPRA
+				</button>
+			</div>
+		</form>
+
+		<div class="x">
+			<label class="factu-label">FACTURACION</label>
+			<table class='factu'> 
+				<thead>
+				<tr>
+					<th  style="width: 200px;" scope="col">Fecha</th>
+					<th  style="width: 100px;" scope="col">Id</th>
+					<th  style="width: 120px;" scope="col">Id Proveedor</th>
+					<th  style="width: 120px;" scope="col">Id Producto</th>
+					<th  style="width: 120px;" scope="col">Cantidad</th>
+					<th  style="width: 120px;" scope="col">Total</th>
+				</tr>
+			</thead>
+			<tbody>
+			<!-- 	<tr *ngFor ="let factura of facturasCompra">
+					<td>{{factura.fecha}}</td>
+                    <td>{{factura.id}}</td>
+                    <td>{{factura.proveedor.id}}</td>
+                    <td>{{factura.producto.id}}</td>
+                    <td>{{factura.cantidad}}</td>
+					<td>{{factura.total}}</td>
+				</tr>  -->
+					
+			</tbody>
+
+			<ul>
+				<li *ngFor ="let factura of facturasCompra">{{factura.proveedor}}</li>
+			</ul>
+			</table>
 		</div>
-        
-		<div class='submit'>
-			<button >
-				AGREGAR
-			</button>
-            <button >
-				FINALIZAR
-			</button>
-		</div>
-	</form>
-	<div class="x">
-		<label class="factu-label">FACTURACION</label>
-		<table class='factu'> 
-			<thead>
-			<tr>
-                <th style="width: 150x" scope="col">CODIGO</th>
-				<th style="width: 310px" scope="col">NOMBRE</th>
-                <th style="width: 200px" scope="col">CANTIDAD</th>
-				<th style="width: 200px" scope="col">TOTAL</th>
-			</tr>
-		</thead>
-		<tbody>
-				<!-- aca se debe asociar los datos de la base de datos -->	
-		</tbody>
-		</table>
-	</div>
+	</main>
 
         
 </div>

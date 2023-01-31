@@ -1,10 +1,13 @@
 
 package com.example.producto.modelo;
 
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Producto{
@@ -16,6 +19,9 @@ public class Producto{
     private String nombre;
     private float precio;
     private int stock;
+    
+    @OneToMany(mappedBy = "producto")    
+    private List<FactCompra> facturasCompras;
 
     public Producto() {
     }

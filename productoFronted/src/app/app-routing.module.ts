@@ -19,6 +19,7 @@ import { ClienteListComponent } from './cliente/cliente-list/cliente-list.compon
 import { ClienteNuevoComponent } from './cliente/cliente-nuevo/cliente-nuevo.component';
 import { ClienteEditarComponent } from './cliente/cliente-editar/cliente-editar.component';
 import { ComprasListarComponent } from './operaciones/compras-listar/compras-listar.component';
+import { VentasListarComponent } from './operaciones/ventas-listar/ventas-listar.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,8 @@ const routes: Routes = [
   {path: 'newClientes', component:ClienteNuevoComponent},
   {path: 'updateCliente', component:ClienteEditarComponent},
   {path: 'compras', component:ComprasListarComponent},
+  {path: 'ventas', component:VentasListarComponent},
+
 
 
   /*Lo redirige a la RAIZ*/

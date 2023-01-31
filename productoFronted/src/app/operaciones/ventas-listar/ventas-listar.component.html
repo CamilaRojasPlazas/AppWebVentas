@@ -1,0 +1,74 @@
+<div class="contenidoVentas">  
+    <!-- Cabecera -->
+    <div class="cabeceraVentas">
+        <div class="tituloVenta">
+            <h2>Ventas</h2>
+        </div>
+
+        <div class="navbarVentas">
+            <nav class="navbar">
+                <a class="link" routerLink="/menu">Volver</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+		<form>
+			<div class='field'>
+				<label>ID_Vendedor</label>
+				<input name='id' type='text' required value="Id vendedor" placeholder='ID_Vendedor' autocomplete />
+			</div>
+			<div class='field'>
+				<label>Nombre</label>
+				<input name='id' type='text'  placeholder='Nombre' autocomplete />
+			</div>
+			<div class='field'>
+				<label>ID_Cliente</label>
+				<input name='id' type='text' required value="Id cliente" placeholder='ID_Cliente' autocomplete />
+			</div>
+			<div class='field'>
+				<label>Nombre</label>
+				<input name='id' type='text'  placeholder='Nombre' autocomplete />
+			</div>
+			<div class='field'>
+				<label>Producto</label>
+				<select name='producto' required>
+					<option selected disabled>Sel. una opción</option>
+					<option>Empanadas</option>
+					<option>Embutidos</option>
+					<option>Arepas</option>
+				</select>
+			</div>
+			<div class='field'>
+				<label>Cantidad</label>
+				<input name='Cantidad' type='number' autocomplete />
+			</div>
+			<div class='submit'>
+				<button >
+					AGREGAR
+				</button>
+			</div>
+			<div class="submit">
+				<button >
+					FINALIZAR
+				</button>
+			</div>
+		</form>
+		<div class="x">
+			<label class="factu-label">FACTURACION</label>
+			<table class='factu'> 
+				<thead>
+				<tr>
+					<th  scope="col">CODIGO</th>
+					<th  scope="col">NOMBRE</th>
+					<th  scope="col">TOTAL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- aca se debe asociar los datos de la base de datos -->	
+			</tbody>
+			</table>
+		</div>		
+	</main>
+
+</div>

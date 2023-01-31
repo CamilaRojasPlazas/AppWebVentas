@@ -21,6 +21,7 @@ import { ClienteListComponent } from './cliente/cliente-list/cliente-list.compon
 import { ClienteNuevoComponent } from './cliente/cliente-nuevo/cliente-nuevo.component';
 import { ClienteEditarComponent } from './cliente/cliente-editar/cliente-editar.component';
 import { ComprasListarComponent } from './operaciones/compras-listar/compras-listar.component';
+import { VentasListarComponent } from './operaciones/ventas-listar/ventas-listar.component';
 
 
 /*Se importan las clases de conexión*/
@@ -53,7 +54,8 @@ import { ToastrModule } from 'ngx-toastr';
     ClienteListComponent,
     ClienteNuevoComponent,
     ClienteEditarComponent,
-    ComprasListarComponent
+    ComprasListarComponent,
+    VentasListarComponent
   ],
   imports: [
     CommonModule,
